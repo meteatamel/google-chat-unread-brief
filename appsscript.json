@@ -1,0 +1,69 @@
+{
+  "timeZone": "Europe/London",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Chat",
+        "version": "v1",
+        "serviceId": "chat"
+      }
+    ]
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/chat.spaces.readonly",
+    "https://www.googleapis.com/auth/chat.messages.readonly",
+    "https://www.googleapis.com/auth/chat.users.readstate",
+    "https://www.googleapis.com/auth/script.locale"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Unread Messages Brief",
+      "logoUrl": "https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v2/192px.svg",
+      "useLocaleFromApp": true
+    },
+    "flows": {
+      "workflowElements": [
+        {
+          "id": "fetch_unread_chat_messages",
+          "state": "ACTIVE",
+          "name": "Fetch Unread Chat Messages",
+          "description": "Fetches unread Google Chat messages across your spaces with space links, without marking them as read.",
+          "workflowAction": {
+            "inputs": [
+              {
+                "id": "excludeSpaceName",
+                "description": "Name or Space ID of your Unread Messages Brief space to exclude from the summary (optional)",
+                "cardinality": "SINGLE",
+                "dataType": {
+                  "basicType": "STRING"
+                }
+              },
+              {
+                "id": "maxLookbackHours",
+                "description": "Maximum hours to look back for unread messages (e.g. 24)",
+                "cardinality": "SINGLE",
+                "dataType": {
+                  "basicType": "INTEGER"
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "id": "unreadMessagesText",
+                "description": "Formatted unread messages and space links ready for Gemini summarization",
+                "cardinality": "SINGLE",
+                "dataType": {
+                  "basicType": "STRING"
+                }
+              }
+            ],
+            "onConfigFunction": "onConfigFetchUnread",
+            "onExecuteFunction": "onExecuteFetchUnread"
+          }
+        }
+      ]
+    }
+  }
+}
