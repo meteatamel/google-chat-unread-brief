@@ -93,6 +93,8 @@ Open [Google Workspace Studio](https://studio.workspace.google.com) (refresh the
         ```
 7. Click **Turn on**.
 
+<img src="images/flow-on-demand.png" alt="On-Demand Unread Messages Brief Flow" width="450">
+
 ---
 
 ## Step 4: Test Your Flow in Google Chat
@@ -117,6 +119,8 @@ Once your `/briefnow` flow is working, create the daily morning schedule by maki
 1. In your Workspace Studio **My flows** list, click **More (`⋮`)** next to `Unread Messages Brief` and select **Make a copy**.
 2. Rename it to `Unread Messages Brief - Scheduled`.
 3. Change the **Starter** at the top to **Schedule** → **Every weekday at 7:45 AM** (and delete the `⏳` progress step in Step 2 so it only posts the finished brief), then click **Turn on**.
+
+<img src="images/flow-scheduled.png" alt="Scheduled Unread Messages Brief Flow" width="450">
 
 ---
 
