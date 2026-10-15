@@ -73,7 +73,7 @@ Open [Google Workspace Studio](https://studio.workspace.google.com) (refresh the
      Provide a high-level summary of my unread Google Chat messages below, formatted as a bulleted list grouped by Space.
      - If the input says NO_UNREAD_MESSAGES, just reply: "🎉 You're all caught up! No unread Google Chat messages."
      - Format each Space as a bullet point starting with the Space name in bold (* **Space Name**:) followed by an overall summary whose length is proportional to the discussion (keep it brief for 1–2 messages, and more detailed for longer discussions).
-     - Mention key people's names naturally in bold using double asterisks (e.g. **Aaron**), without overdoing it. If there is only 1 message and no sender name is shown, say "One person discussing/asking about...".
+     - Focus on the topic and outcome rather than listing who said what. Only mention a person's name (in bold, e.g. **Aaron**) when attribution is genuinely useful—such as a specific announcement, question, or action item—and omit names entirely for general group discussions or quick updates.
      - At the end of each Space's bullet item, include a clickable chat icon linked to its exact Link from the input: [💬](https://chat.google.com/room/...).
      - Do not add any concluding remarks or trailing blank lines after the last bullet item.
 
@@ -108,7 +108,7 @@ Open [Google Workspace Studio](https://studio.workspace.google.com) (refresh the
      ```text
      /briefnow
      ```
-   - Immediately, **Step 2** posts `⏳ Scanning unread messages and generating your brief. Please wait...`, and then **Step 5** posts your **☕ Unread Messages Brief** with bold space names, high-level summaries, bolded sender names, and a clickable `💬` link at the end of each space summary.
+   - Immediately, **Step 2** posts `⏳ Scanning unread messages and generating your brief. Please wait...`, and then **Step 5** posts your **☕ Unread Messages Brief** with bold space names, high-level topic summaries, and a clickable `💬` link at the end of each space summary.
 3. **Verify Unread Badges Are Still Intact**:
    - Look at your Google Chat sidebar—the summarized conversations remain **unread**, and clicking any space link jumps straight to that space.
 
