@@ -1,4 +1,4 @@
-# Build an Automated "Unread Messages Brief" in Google Chat (Workspace Studio + Apps Script)
+# Google Chat Unread Messages Brief
 
 ## Motivation
 
@@ -8,6 +8,8 @@ Instead, this guide shows you how to build an automated **Unread Messages Brief*
 
 - **Daily 7:45 AM Scheduled Brief**: Automatically summarizes your unread messages from the last 24 hours (top-level messages and threads you follow, without marking them as read) and posts a clean bulleted brief with clickable space links into your private **`Unread Messages Brief`** space each weekday morning.
 - **On-Demand Trigger (`/briefnow`)**: Type `/briefnow` in your **`Unread Messages Brief`** space anytime during the day to generate a fresh summary on demand.
+
+*Built with **Gemini 4** and **Antigravity**.*
 
 ---
 
@@ -109,6 +111,10 @@ Open [Google Workspace Studio](https://studio.workspace.google.com) (refresh the
    - Immediately, **Step 2** posts `⏳ Scanning unread messages and generating your brief. Please wait...`, and then **Step 5** posts your **☕ Unread Messages Brief** with bold space names, high-level summaries, bolded sender names, and a clickable `💬` link at the end of each space summary.
 3. **Verify Unread Badges Are Still Intact**:
    - Look at your Google Chat sidebar—the summarized conversations remain **unread**, and clicking any space link jumps straight to that space.
+
+<img src="images/briefnow-chat.jpeg" alt="Unread Messages Brief in Google Chat" width="600">
+
+*(Note: All space names, people, and discussions shown in the screenshot above are fictional.)*
 
 ---
 
