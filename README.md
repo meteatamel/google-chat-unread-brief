@@ -67,7 +67,7 @@ Open [Google Workspace Studio](https://studio.workspace.google.com) (refresh the
    - Set **Exclude Space Name or ID** to `Unread Messages Brief`.
    - Set **Max Lookback Window (Hours)** to `24`.
 5. **Step 4 (Built-in Gemini Step — Summarize)**:
-   - Click **+ Add step** → select **Ask Gemini with skills**.
+   - Click **+ Add step** → select **Ask Gemini**.
    - Paste the prompt text below into the prompt box:
      ```text
      Provide a high-level summary of my unread Google Chat messages below, formatted as a bulleted list grouped by Space.
@@ -88,7 +88,7 @@ Open [Google Workspace Studio](https://studio.workspace.google.com) (refresh the
         ```text
         ☕ *Unread Messages Brief*
         ```
-     2. Click **`+ Variables`** → select **`Step 4: Ask Gemini with skills` → `Content created by Gemini`** and press Enter twice.
+     2. Click **`+ Variables`** → select **`Step 4: Ask Gemini` → `Content created by Gemini`** and press Enter twice.
      3. Paste the footer:
         ```text
         💡 _`/briefnow` to refresh summary_
